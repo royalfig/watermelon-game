@@ -68,6 +68,7 @@ article {
 }
 p {
   margin-bottom: 2rem;
+  hyphens: auto;
 }
 
 .responsive-shell {

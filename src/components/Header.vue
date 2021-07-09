@@ -27,11 +27,11 @@ nav {
   background: var(--green-gradient);
   display: flex;
   align-items: center;
-  padding: var(--spacing);
-  font-size: 2rem;
+  padding: var(--spacing-half);
+  font-size: 1.75rem;
   justify-content: center;
   position: relative;
-  color: #000;
+  color: #fff;
 }
 
 nav::after {
