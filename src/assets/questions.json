@@ -2,7 +2,7 @@
   {
     "num": 1,
     "category": "📺 Television",
-    "text": "The following clip is from which TV show?",
+    "text": "Name of this TV show",
     "answer": "The Office",
     "type": "video",
     "media": "office.mp4"
@@ -10,7 +10,7 @@
   {
     "num": 2,
     "category": "🎼 Music",
-    "text": "Which artist sings this song?",
+    "text": "Artist who sings this song",
     "answer": "Harry Styles",
     "type": "video",
     "media": "sugar.mp4"
@@ -21,22 +21,54 @@
     "text": "This comedian smashes watermelons",
     "answer": "Gallagher",
     "type": "video",
-    "media": "sugar.mp4"
+    "media": "smash.mp4"
   },
   {
     "num": 4,
     "category": "🧬 Science",
-    "text": "How many varieties of watermelons exist?",
-    "answer": "1200",
+    "text": "Number of watermelon varieties",
+    "answer": "1200+",
     "type": "image",
     "media": "varieties.jpg"
   },
   {
     "num": 5,
-    "category": "🗺️ Geography",
-    "text": "Where cube-shaped watermelons were first grown",
-    "answer": "Japan",
+    "category": "🍹 Food & Drink",
+    "text": "This refreshing Mexican drink",
+    "answer": "Agua fresca",
+    "type": "video",
+    "media": "fresca.mp4"
+  },
+  {
+    "num": 6,
+    "category": "🎨 Art",
+    "text": "The name of this artist",
+    "answer": "Frida Kahlo",
     "type": "image",
-    "media": "cube.jpg"
+    "media": "frida.jpg"
+  },
+  {
+    "num": 7,
+    "category": "🏋️ Weights & Measures",
+    "text": "Weight of the heaviest watermelon",
+    "answer": "350.5 lb",
+    "type": "image",
+    "media": "thicc.jpg"
+  },
+  {
+    "num": 8,
+    "category": "📜 History",
+    "text": "Which watermelon recipe in the first American cookbook (1796)",
+    "answer": "Watermelon rind pickles",
+    "type": "image",
+    "media": "cookbook.jpg"
+  },
+  {
+    "num": 9,
+    "category": "🧬 Science",
+    "text": "Origin of the watermelon",
+    "answer": "Northeast Africa in the Kordofan region of southern Sudan",
+    "type": "image",
+    "media": "origin.png"
   }
 ]

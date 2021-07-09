@@ -103,6 +103,5 @@ html {
   font-family: "Fredoka One", sans-serif;
   font-weight: 400;
   background-blend-mode: darken;
-  padding-bottom: var(--spacing);
 }
 </style>

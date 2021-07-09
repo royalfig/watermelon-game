@@ -24,8 +24,12 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 932px;
-  margin: var(--spacing-2x) auto;
+  max-width: 80vw;
+  margin: var(--spacing) auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .num {
@@ -39,9 +43,20 @@ export default {
   margin: 0.55rem;
   border: none;
   cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.num:hover {
+  box-shadow: var(--shadow-lg);
 }
 
 .num img {
   height: 100%;
+  filter: saturate(95%) contrast(95%);
+  transition: filter 0.2s;
+}
+
+.num:hover img {
+  filter: saturate(125%) contrast(125%);
 }
 </style>

@@ -1,9 +1,12 @@
 <template>
-  <nav>
-    <img src="../assets/watermelon.png" alt="watermelon" />
-    <h1>{{ text }}</h1>
-    <img src="../assets/watermelon.png" alt="watermelon" />
-  </nav>
+  <div class="container">
+    <nav>
+      <img src="../assets/watermelon.png" alt="watermelon" />
+      <h1>{{ text }}</h1>
+      <img src="../assets/watermelon.png" alt="watermelon" />
+    </nav>
+    <div class="rind"></div>
+  </div>
 </template>
 
 <script>
@@ -15,6 +18,10 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  height: 4.775rem;
+}
+
 button {
   background: none;
   font-family: inherit;
@@ -29,20 +36,16 @@ nav {
   align-items: center;
   padding: var(--spacing-half);
   font-size: 1.75rem;
+  line-height: 1.3;
   justify-content: center;
   position: relative;
   color: #fff;
 }
 
-nav::after {
-  height: 0.5em;
+.rind {
+  height: 0.5rem;
   width: 100%;
-  position: absolute;
-  content: "";
   background: #fff;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%);
 }
 
 h1 {

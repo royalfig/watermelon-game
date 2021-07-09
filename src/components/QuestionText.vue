@@ -40,13 +40,19 @@ export default {
 
 <style scoped>
 .container {
-  padding: var(--padding);
+  padding: var(--spacing-half);
+  height: calc(100vh - 4.775rem);
+  display: flex;
+  align-items: center;
 }
 
 article {
-  max-width: 932px;
+  max-width: 80vw;
+  max-height: 100%;
+  /* overflow-y: auto;
+  overflow-x: visible; */
   /* max-height: 932px; */
-  margin: var(--spacing) auto;
+  margin: 0 auto;
   color: #000;
   padding: var(--spacing);
   background: #fff;
@@ -70,6 +76,13 @@ p {
   margin-bottom: 2rem;
   hyphens: auto;
 }
+.media {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
 
 .responsive-shell {
   height: 0;
@@ -89,6 +102,7 @@ img {
   top: 0;
   padding: 0.25rem;
   border: 4px dotted var(--watermelon);
+  margin: 0 auto;
 }
 
 img {
@@ -103,15 +117,20 @@ button {
   border: none;
   background: var(--green-gradient);
   color: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
   cursor: pointer;
-  transition: background-color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
   margin: 0.5rem 0;
   line-height: 1;
   position: absolute;
   left: 0;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+button:hover {
+  background: var(--pink-gradient);
+  box-shadow: var(--shadow-lg);
 }
 </style>
