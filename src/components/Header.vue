@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .container {
-  height: 4.775rem;
+  height: 5.75rem;
 }
 
 button {
@@ -49,18 +49,38 @@ button {
   border: none;
   font-size: inherit;
   cursor: pointer;
-  align-self: flex-start;
+  /* align-self: flex-start; */
+  line-height: inherit;
+  display: inline;
+  position: relative;
+  height: 1em;
 }
+
 nav {
   background: var(--green-gradient);
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
   padding: var(--spacing-half);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1.3;
   justify-content: center;
   position: relative;
   color: #fff;
+  overflow: hidden;
+  height: calc(100% - 0.5rem);
+}
+
+@media (min-width: 768px) {
+  nav {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    font-size: 2.5rem;
+  }
 }
 
 .rind {
@@ -71,18 +91,25 @@ nav {
 
 h1 {
   font-size: 1em;
+  white-space: nowrap;
 }
 
 img {
   height: 1em;
   margin: 0 0.5em;
+  transform: rotate(0deg);
 }
-img:last-of-type {
+button > img {
   transform: rotate(180deg);
 }
 
+button > img.rotated {
+  transform: rotate(-25deg);
+  filter: hue-rotate(300deg);
+}
+
 img.rotated {
-  transform: rotate(390deg);
-  filter: hue-rotate(-90deg);
+  transform: rotate(25deg);
+  filter: hue-rotate(-140deg);
 }
 </style>

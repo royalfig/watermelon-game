@@ -24,27 +24,35 @@ export default {
 
 <style scoped>
 .container {
-  height: calc(100vh - 4.775rem);
+  height: calc(100vh - 5.75rem);
   margin: 0 auto;
-  max-width: 80vw;
+  width: 80vw;
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
+  gap: var(--spacing);
 }
 
 .num {
   background: rgba(255, 255, 255, 0.95);
   padding: 1rem;
-  height: 250px;
-  width: 250px;
+  height: 8rem;
+  width: 8rem;
   object-fit: contain;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  margin: 0.55rem;
+
   border: none;
   cursor: pointer;
   transition: box-shadow 0.2s;
+}
+
+@media (min-width: 768px) {
+  .num {
+    height: 10rem;
+    width: 10rem;
+  }
 }
 
 .num:hover {

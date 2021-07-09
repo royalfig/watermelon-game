@@ -2,39 +2,39 @@
   {
     "num": 1,
     "category": "📺 Television",
-    "text": "Name of this TV show",
-    "answer": "The Office",
+    "text": "What's the name of this hit NBC TV show?",
+    "answer": "The Office - Baby Shower (2008)",
     "type": "video",
     "media": "office.mp4"
   },
   {
     "num": 2,
     "category": "🎼 Music",
-    "text": "Artist who sings this song",
-    "answer": "Harry Styles",
+    "text": "Who's the artist who sings this song?",
+    "answer": "Harry Styles - Watermelon Sugar (2019)",
     "type": "video",
     "media": "sugar.mp4"
   },
   {
     "num": 3,
     "category": "🎭 Comedy",
-    "text": "This comedian smashes watermelons",
-    "answer": "Gallagher",
+    "text": "Which comedian is famous for smashing watermelons?",
+    "answer": "Gallagher (1946-)",
     "type": "video",
     "media": "smash.mp4"
   },
   {
     "num": 4,
     "category": "🧬 Science",
-    "text": "Number of watermelon varieties",
-    "answer": "1200+",
+    "text": "How many watermelon varieties currently exist?",
+    "answer": "1200+ (Golden Midget, Moon and Stars, Orangeglo...)",
     "type": "image",
     "media": "varieties.jpg"
   },
   {
     "num": 5,
     "category": "🍹 Food & Drink",
-    "text": "This refreshing Mexican drink",
+    "text": "What's a refreshing Mexican drink often made with watermelon?",
     "answer": "Agua fresca",
     "type": "video",
     "media": "fresca.mp4"
@@ -42,32 +42,32 @@
   {
     "num": 6,
     "category": "🎨 Art",
-    "text": "The name of this artist",
-    "answer": "Frida Kahlo",
+    "text": "Which artist painted this artwork?",
+    "answer": "Frida Kahlo - Viva La Vida (1954)",
     "type": "image",
     "media": "frida.jpg"
   },
   {
     "num": 7,
     "category": "🏋️ Weights & Measures",
-    "text": "Weight of the heaviest watermelon",
-    "answer": "350.5 lb",
+    "text": "What's the weight of the world's heaviest watermelon?",
+    "answer": "350.5 lb - Christomer Kent (2013)",
     "type": "image",
     "media": "thicc.jpg"
   },
   {
     "num": 8,
     "category": "📜 History",
-    "text": "Which watermelon recipe in the first American cookbook (1796)",
-    "answer": "Watermelon rind pickles",
+    "text": "Which watermelon recipe appears in the first American cookbook",
+    "answer": "Watermelon rind pickles in American Cookery (1796) by Amelia Simmons",
     "type": "image",
     "media": "cookbook.jpg"
   },
   {
     "num": 9,
-    "category": "🧬 Science",
-    "text": "Origin of the watermelon",
-    "answer": "Northeast Africa in the Kordofan region of southern Sudan",
+    "category": "🗺️ Geography",
+    "text": "Where did the watermelon come from?",
+    "answer": "From Northeast Africa in the Kordofan region of southern Sudan (and not from South Africa)",
     "type": "image",
     "media": "origin.png"
   }

@@ -3,12 +3,13 @@
     <Header :text="text" @reveal="showAnswers" />
     <div class="container">
       <transition name="slide-fade" mode="out-in">
-        <QuestionList v-if="!num" @question="logQuestion" />
+        <QuestionList v-if="!num" @question="logQuestion" key="question" />
         <QuestionText
           v-else
           :num="num"
           @question="logQuestion"
           :answers="answers"
+          key="answer"
         />
       </transition>
     </div>
@@ -96,11 +97,11 @@ export default {
 }
 
 html {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-size: clamp(
-    1.25rem,
-    1.0119047619047619rem + 1.1904761904761907vw,
-    2.5rem
+    1rem,
+    0.9038461538461539rem + 0.4807692307692308vw,
+    1.625rem
   );
   color: #fff;
 }
@@ -115,6 +116,7 @@ html {
   font-family: "Fredoka One", sans-serif;
   font-weight: 400;
   background-blend-mode: darken;
+  overflow: hidden;
 }
 .slide-fade-enter-active {
   transition: opacity 0.3s ease-out;
