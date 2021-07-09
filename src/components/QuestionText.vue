@@ -39,9 +39,13 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  padding: var(--padding);
+}
+
 article {
   max-width: 932px;
-  max-height: 932px;
+  /* max-height: 932px; */
   margin: var(--spacing) auto;
   color: #000;
   padding: var(--spacing);
@@ -51,6 +55,7 @@ article {
   box-shadow: var(--shadow);
   position: relative;
 }
+
 .category {
   position: absolute;
   top: 0;
@@ -83,6 +88,10 @@ img {
   top: 0;
   padding: 0.25rem;
   border: 4px dotted var(--watermelon);
+}
+
+img {
+  object-fit: cover;
 }
 
 button {

@@ -98,10 +98,11 @@ html {
   background-size: 1000px 1000px, 100% 100%;
   background-position: 0 150%, 0 0;
   background-repeat: repeat-x, no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   font-family: "Fredoka One", sans-serif;
   font-weight: 400;
   background-blend-mode: darken;
-  padding-bottom: 5rem;
+  padding-bottom: var(--spacing);
 }
 </style>

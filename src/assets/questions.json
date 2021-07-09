@@ -18,7 +18,7 @@
   {
     "num": 3,
     "category": "🎭 Comedy",
-    "text": "Which comedian is famous for smashing watermelons?",
+    "text": "This comedian smashes watermelons",
     "answer": "Gallagher",
     "type": "video",
     "media": "sugar.mp4"
@@ -30,5 +30,13 @@
     "answer": "1200",
     "type": "image",
     "media": "varieties.jpg"
+  },
+  {
+    "num": 5,
+    "category": "🗺️ Geography",
+    "text": "Where were cube watermelons first grown?",
+    "answer": "Japan",
+    "type": "image",
+    "media": "cube.jpg"
   }
 ]
