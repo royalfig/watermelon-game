@@ -3,21 +3,26 @@
     <article>
       <p class="category">{{ question.category }}</p>
       <p>{{ question.text }}</p>
-      <div class="media">
-        <div class="responsive-shell">
-          <video controls v-if="question.type === 'video'">
-            <source
-              :src="require(`../assets/${question.media}`)"
-              type="video/mp4"
-            />
-          </video>
-          <img
-            v-if="question.type === 'image'"
-            :src="require(`../assets/${question.media}`)"
-            alt="watermelon"
-          />
+      <transition name="slide-fade" mode="out-in">
+        <div class="media" v-if="answers">
+          <p class="answer">{{ question.answer }}</p>
         </div>
-      </div>
+        <div class="media" v-else>
+          <div class="responsive-shell">
+            <video controls v-if="question.type === 'video'">
+              <source
+                :src="require(`../assets/${question.media}`)"
+                type="video/mp4"
+              />
+            </video>
+            <img
+              v-if="question.type === 'image'"
+              :src="require(`../assets/${question.media}`)"
+              alt="watermelon"
+            />
+          </div>
+        </div>
+      </transition>
       <button @click="$emit('question', { number: null })">⮨</button>
     </article>
   </div>
@@ -28,6 +33,7 @@ import questionData from "../assets/questions.json";
 export default {
   props: {
     num: Number,
+    answers: Boolean,
   },
   computed: {
     question() {
@@ -44,6 +50,10 @@ export default {
   height: calc(100vh - 4.775rem);
   display: flex;
   align-items: center;
+}
+
+.answer {
+  color: var(--dark-green);
 }
 
 article {

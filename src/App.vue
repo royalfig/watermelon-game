@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <Header :text="text" />
+    <Header :text="text" @reveal="showAnswers" />
     <div class="container">
-      <QuestionList v-if="!num" @question="logQuestion" />
-      <QuestionText v-else :num="num" @question="logQuestion" />
+      <transition name="slide-fade" mode="out-in">
+        <QuestionList v-if="!num" @question="logQuestion" />
+        <QuestionText
+          v-else
+          :num="num"
+          @question="logQuestion"
+          :answers="answers"
+        />
+      </transition>
     </div>
   </div>
 </template>
@@ -21,6 +28,7 @@ export default {
   data() {
     return {
       num: null,
+      answers: false,
     };
   },
   computed: {
@@ -36,6 +44,10 @@ export default {
     logQuestion(e) {
       const { number } = e;
       this.num = number;
+    },
+    showAnswers(e) {
+      const state = e.state;
+      this.answers = state;
     },
   },
 };
@@ -103,5 +115,17 @@ html {
   font-family: "Fredoka One", sans-serif;
   font-weight: 400;
   background-blend-mode: darken;
+}
+.slide-fade-enter-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: opacity 0.3s ease-in;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
 }
 </style>

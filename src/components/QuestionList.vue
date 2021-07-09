@@ -24,8 +24,9 @@ export default {
 
 <style scoped>
 .container {
+  height: calc(100vh - 4.775rem);
+  margin: 0 auto;
   max-width: 80vw;
-  margin: var(--spacing) auto;
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;

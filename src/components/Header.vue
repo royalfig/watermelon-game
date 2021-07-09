@@ -1,9 +1,19 @@
 <template>
   <div class="container">
     <nav>
-      <img src="../assets/watermelon.png" alt="watermelon" />
+      <img
+        src="../assets/watermelon.png"
+        alt="watermelon"
+        :class="{ rotated: revealed }"
+      />
       <h1>{{ text }}</h1>
-      <img src="../assets/watermelon.png" alt="watermelon" />
+      <button @click="reveal">
+        <img
+          src="../assets/watermelon.png"
+          alt="watermelon"
+          :class="{ rotated: revealed }"
+        />
+      </button>
     </nav>
     <div class="rind"></div>
   </div>
@@ -13,6 +23,17 @@
 export default {
   props: {
     text: String,
+  },
+  data() {
+    return {
+      revealed: false,
+    };
+  },
+  methods: {
+    reveal() {
+      this.revealed = !this.revealed;
+      this.$emit("reveal", { state: this.revealed });
+    },
   },
 };
 </script>
@@ -58,5 +79,10 @@ img {
 }
 img:last-of-type {
   transform: rotate(180deg);
+}
+
+img.rotated {
+  transform: rotate(390deg);
+  filter: hue-rotate(-90deg);
 }
 </style>
