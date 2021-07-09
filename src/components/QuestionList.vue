@@ -37,8 +37,8 @@ export default {
 .num {
   background: rgba(255, 255, 255, 0.95);
   padding: 1rem;
-  height: 8rem;
-  width: 8rem;
+  height: 6rem;
+  width: 6rem;
   object-fit: contain;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
@@ -49,6 +49,13 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .num {
+    height: 8rem;
+    width: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .num {
     height: 10rem;
     width: 10rem;

@@ -6,7 +6,7 @@
       </div>
       <p>{{ question.text }}</p>
       <transition name="slide-fade" mode="out-in">
-        <div class="media confetti" v-if="answers" key="confetti">
+        <div class="confetti" v-if="answers" key="confetti">
           <p class="answer">{{ question.answer }}</p>
         </div>
         <div class="media" key="question" v-else>
@@ -71,36 +71,48 @@ export default {
   padding: var(--spacing);
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius);
-  margin: var(--spacing-half);
 }
 
 article {
   width: 80vw;
-  height: 100%;
+  /* height: 100%; */
   /* overflow-y: auto;
   overflow-x: visible; */
   /* max-height: 932px; */
   margin: 0 auto;
   color: #000;
-  padding: var(--spacing);
+  padding: var(--spacing-half);
   background: #fff;
   border-radius: var(--radius);
-  font-size: 2rem;
+  font-size: 1rem;
   box-shadow: var(--shadow);
   position: relative;
 }
 
+@media (min-width: 768px) {
+  article {
+    font-size: 2rem;
+    padding: var(--spacing);
+  }
+}
+
 .confetti {
   background-image: url("../assets/confetti.png");
-  background-size: 50% 50%;
-  background-repeat: repeat;
+  background-repeat: none;
+  border-radius: var(--radius);
+  /* padding: 1rem; */
+  height: calc(0.5625 * 90vmin);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px dotted var(--watermelon);
 }
 
 .category {
   display: block;
   text-align: center;
   line-height: 1;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 p:not(.category) {
@@ -119,19 +131,17 @@ p:not(.category) {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
-  
 }
 .media {
   max-width: 90vmin;
   margin: 0 auto;
   position: relative;
-  height: 100%;
+  /* height: 100%; */
   overflow: auto;
-  height: calc(100vh - 17.75rem);
+  /* height: calc(100vh - 17.75rem); */
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius);
 }
 
 .responsive-shell {
@@ -140,7 +150,7 @@ p:not(.category) {
   padding-top: 56.25%;
   position: relative;
   border-radius: 4px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 video,

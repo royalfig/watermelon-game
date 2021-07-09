@@ -91,7 +91,9 @@ nav {
 
 h1 {
   font-size: 1em;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  hyphens: auto;
+  text-align: center;
 }
 
 img {

@@ -37,7 +37,7 @@ export default {
       if (this.num) {
         return `Question ${this.num}`;
       } else {
-        return "Rachel & Eric's Lil' Watermelon Trivia";
+        return "Lil' Watermelon Trivia";
       }
     },
   },
