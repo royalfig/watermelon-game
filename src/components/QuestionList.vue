@@ -27,8 +27,10 @@ export default {
   height: calc(100vh - 5.75rem);
   margin: 0 auto;
   width: 80vw;
+  padding: var(--spacing-half);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, calc(33% - (4rem / 3)));
   justify-content: center;
   align-items: center;
   gap: var(--spacing);
@@ -37,9 +39,8 @@ export default {
 .num {
   background: rgba(255, 255, 255, 0.95);
   padding: 1rem;
-  height: 6rem;
-  width: 6rem;
-  object-fit: contain;
+  height: 100%;
+  width: 100%;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 
@@ -48,26 +49,15 @@ export default {
   transition: box-shadow 0.2s;
 }
 
-@media (min-width: 768px) {
-  .num {
-    height: 8rem;
-    width: 8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .num {
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
 .num:hover {
   box-shadow: var(--shadow-lg);
 }
 
 .num img {
   height: 100%;
+  width: 100%;
+  object-fit: contain;
+
   filter: saturate(95%) contrast(95%);
   transition: filter 0.2s;
 }

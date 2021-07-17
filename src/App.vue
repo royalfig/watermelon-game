@@ -111,12 +111,12 @@ html {
   background-size: 1000px 1000px, 100% 100%;
   background-position: 0 150%, 0 0;
   background-repeat: repeat-x, no-repeat;
-  min-height: 100vh;
-  height: 100%;
+  /* min-height: 100vh; */
+  /* height: 100%; */
   font-family: "Fredoka One", sans-serif;
   font-weight: 400;
   background-blend-mode: darken;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .slide-fade-enter-active {
   transition: opacity 0.3s ease-out;

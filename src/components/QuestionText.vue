@@ -10,19 +10,17 @@
           <p class="answer">{{ question.answer }}</p>
         </div>
         <div class="media" key="question" v-else>
-          <div class="responsive-shell">
-            <video controls v-if="question.type === 'video'">
-              <source
-                :src="require(`../assets/${question.media}`)"
-                type="video/mp4"
-              />
-            </video>
-            <img
-              v-if="question.type === 'image'"
+          <video controls v-if="question.type === 'video'">
+            <source
               :src="require(`../assets/${question.media}`)"
-              alt="watermelon"
+              type="video/mp4"
             />
-          </div>
+          </video>
+          <img
+            v-if="question.type === 'image'"
+            :src="require(`../assets/${question.media}`)"
+            alt="watermelon"
+          />
         </div>
       </transition>
       <button @click="$emit('question', { number: null })">
@@ -60,7 +58,6 @@ export default {
 .container {
   padding: var(--spacing-half);
   height: calc(100vh - 5.75rem);
-
   display: flex;
   align-items: center;
 }
@@ -75,10 +72,9 @@ export default {
 
 article {
   width: 80vw;
-  /* height: 100%; */
-  /* overflow-y: auto;
-  overflow-x: visible; */
-  /* max-height: 932px; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   color: #000;
   padding: var(--spacing-half);
@@ -91,7 +87,7 @@ article {
 
 @media (min-width: 768px) {
   article {
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding: var(--spacing);
   }
 }
@@ -133,24 +129,14 @@ p:not(.category) {
   letter-spacing: 2px;
 }
 .media {
-  max-width: 90vmin;
+  width: 90%;
+  flex: 1;
   margin: 0 auto;
   position: relative;
-  /* height: 100%; */
   overflow: auto;
-  /* height: calc(100vh - 17.75rem); */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.responsive-shell {
-  height: 0;
-  width: 100%;
-  padding-top: 56.25%;
-  position: relative;
-  border-radius: 4px;
-  /* overflow: hidden; */
 }
 
 video,
@@ -163,10 +149,7 @@ img {
   padding: 0.25rem;
   border: 4px dotted var(--watermelon);
   margin: 0 auto;
-}
-
-img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 button {
