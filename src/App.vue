@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img id="bee" src="./assets/bee-2.png" alt="" />
     <Header :text="text" @reveal="showAnswers" />
     <div class="container">
       <transition name="slide-fade" mode="out-in">
@@ -32,15 +33,17 @@ export default {
       answers: false,
     };
   },
+
   computed: {
     text() {
       if (this.num) {
         return `Question ${this.num}`;
       } else {
-        return "Lil' Watermelon Trivia";
+        return "BaBee Trivia";
       }
     },
   },
+
   methods: {
     logQuestion(e) {
       const { number } = e;
@@ -51,15 +54,95 @@ export default {
       this.answers = state;
     },
   },
+
+  mounted() {
+    let top1 = 60,
+      right1 = 5,
+      count = 1;
+
+    const bee = document.getElementById("bee");
+
+    bee.addEventListener("animationend", updateAnimation);
+    updateAnimation();
+    function updateAnimation() {
+      function getRandomNum(bound1, bound2) {
+        let min = bound1;
+        let max = bound2;
+
+        if (!bound2) {
+          min =
+            Math.max(0, bound1 - bound1) === 0
+              ? getRandomNum(0, 100)
+              : Math.max(0, bound1 - bound1);
+          max =
+            Math.min(100, bound1 * 5) === 100
+              ? getRandomNum(0, 100)
+              : Math.min(100, bound1 * 5);
+        }
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+
+      function scaler(first, second) {
+        if (first - second >= 0) {
+          return "scaleX(1)";
+        }
+        return "scaleX(-1)";
+      }
+
+      let previous = [right1, top1];
+
+      top1 = getRandomNum(previous[1]);
+
+      right1 = getRandomNum(previous[0]);
+
+      const template = `
+      #bee {
+        animation: beeFlight${count} 2s ease-out;
+      }
+
+      @keyframes beeFlight${count}  {
+
+        from {
+          right:${previous[0]}%;
+          top: ${previous[1]}%;
+          transform: ${scaler(right1, previous[0])} rotate(${getRandomNum(
+        -25,
+        25
+      )}deg);
+
+        }
+
+        to {
+          transform: ${scaler(right1, previous[0])} rotate(${getRandomNum(
+        -25,
+        25
+      )}deg);
+          right:${right1}%; 
+          top: ${top1}%;
+        }
+     
+    }`;
+      const head = document.head;
+      const animation = document.getElementById("animation");
+      if (animation) {
+        animation.remove();
+      }
+      const style = document.createElement("style");
+      style.id = "animation";
+      style.append(document.createTextNode(template));
+      head.append(style);
+      count++;
+    }
+  },
 };
 </script>
 
 <style>
 :root {
-  --watermelon: #fa2a60;
-  --melon: #f6b2bb;
-  --light-green: #bedba6;
-  --dark-green: #2a8a6e;
+  --watermelon: #fae52a;
+  --melon: #f3e567;
+  --light-green: #111003;
+  --dark-green: #3a370c;
 
   --spacing-half: 1rem;
   --spacing: 2rem;
@@ -71,21 +154,14 @@ export default {
   --shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-  --green-gradient: linear-gradient(
-    to top,
-    #bedba6,
-    #9cc795,
-    #79b286,
-    #559e79,
-    #2a8a6e
-  );
+  --yellow-gradient: linear-gradient(to top, #fae52a, #fcf191);
   --pink-gradient: linear-gradient(
     to bottom,
-    #f6b2bb,
-    #fa97a5,
-    #fc7a8e,
-    #fc5977,
-    #fa2a60
+    #fae52a,
+    #ffa146,
+    #ff608f,
+    #eb5ad7,
+    #3774fa
   );
 }
 *,
@@ -103,21 +179,24 @@ html {
     0.9038461538461539rem + 0.4807692307692308vw,
     1.625rem
   );
-  color: #fff;
+  color: #000;
+}
+
+body {
+  overflow: hidden;
 }
 
 #app {
-  background: url("./assets/seeds-rotated.png"), var(--pink-gradient);
-  background-size: 1000px 1000px, 100% 100%;
-  background-position: 0 150%, 0 0;
-  background-repeat: repeat-x, no-repeat;
-  /* min-height: 100vh; */
-  /* height: 100%; */
-  font-family: "Fredoka One", sans-serif;
+  font-family: "Otomanopee One", sans-serif;
   font-weight: 400;
   background-blend-mode: darken;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
+
+.container {
+  background: var(--pink-gradient);
+}
+
 .slide-fade-enter-active {
   transition: opacity 0.3s ease-out;
 }
@@ -129,5 +208,15 @@ html {
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   opacity: 0;
+}
+
+#bee {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  top: 60%;
+  right: 5%;
+  z-index: 1000;
+  filter: drop-shadow(0 2px 0.5em rgba(0, 0, 0, 0.45));
 }
 </style>

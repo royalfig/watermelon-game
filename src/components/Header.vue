@@ -1,16 +1,13 @@
 <template>
   <div class="container">
     <nav>
-      <img
-        src="../assets/watermelon.png"
-        alt="watermelon"
-        :class="{ rotated: revealed }"
-      />
+      <img src="../assets/bee-1.png" alt="bee" :class="{ rotated: revealed }" />
+
       <h1>{{ text }}</h1>
       <button @click="reveal">
         <img
-          src="../assets/watermelon.png"
-          alt="watermelon"
+          src="../assets/bee-2.png"
+          alt="bee"
           :class="{ rotated: revealed }"
         />
       </button>
@@ -57,7 +54,7 @@ button {
 }
 
 nav {
-  background: var(--green-gradient);
+  background: var(--yellow-gradient);
   display: grid;
   grid-template-columns: auto auto auto;
   align-items: center;
@@ -86,7 +83,7 @@ nav {
 .rind {
   height: 0.5rem;
   width: 100%;
-  background: #fff;
+  background: #000;
 }
 
 h1 {
@@ -94,24 +91,27 @@ h1 {
   /* white-space: nowrap; */
   hyphens: auto;
   text-align: center;
+  color: black;
 }
 
 img {
   height: 1em;
+  width: auto;
   margin: 0 0.5em;
   transform: rotate(0deg);
 }
+
 button > img {
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 button > img.rotated {
   transform: rotate(-25deg);
-  filter: hue-rotate(300deg);
+  /* filter: hue-rotate(300deg); */
 }
 
 img.rotated {
   transform: rotate(25deg);
-  filter: hue-rotate(-140deg);
+  /* filter: hue-rotate(-140deg); */
 }
 </style>

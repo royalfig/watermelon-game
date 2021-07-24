@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <answers :answers="question.answers" />
     <article>
       <div class="category">
         <p>{{ question.category }}</p>
@@ -40,7 +41,13 @@
 
 <script>
 import questionData from "../assets/questions.json";
+import Answers from "../components/Answers.vue";
+
 export default {
+  components: {
+    Answers,
+  },
+
   props: {
     num: Number,
     answers: Boolean,
@@ -88,7 +95,7 @@ article {
 @media (min-width: 768px) {
   article {
     font-size: 1.75rem;
-    padding: var(--spacing);
+    padding: var(--spacing-half) var(--spacing);
   }
 }
 
@@ -121,7 +128,7 @@ p:not(.category) {
   text-align: center;
   display: inline-block;
   font-size: 0.8rem;
-  background: var(--green-gradient);
+  background: var(--yellow-gradient);
   padding: 0.5rem;
   border-radius: var(--radius);
   margin: 0;
@@ -158,7 +165,7 @@ button {
   font-family: inherit;
   background: none;
   border: none;
-  background: var(--green-gradient);
+  background: var(--yellow-gradient);
   color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   box-shadow: var(--shadow);

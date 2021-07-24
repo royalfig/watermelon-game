@@ -1,74 +1,83 @@
 [
   {
     "num": 1,
-    "category": "📺 Television",
-    "text": "What's the name of this hit NBC TV show?",
-    "answer": "The Office - Baby Shower (2008)",
+    "category": "🍿 Movies",
+    "text": "What's the name of this movie",
+    "answer": "Bee Movie",
     "type": "video",
-    "media": "office.mp4"
+    "media": "bee.mp4",
+    "answers": ["Bee Movie", "Honeybees", "A Bee's Life", "Just Bee Yourself"]
   },
   {
     "num": 2,
-    "category": "🎼 Music",
-    "text": "Who's the artist who sings this song?",
-    "answer": "Harry Styles - Watermelon Sugar (2019)",
-    "type": "video",
-    "media": "sugar.mp4"
+    "category": "🧬 Science",
+    "text": "How many species of bees are known?",
+    "answer": "20,000",
+    "type": "image",
+    "media": "bee-species.jpg",
+    "answers": ["5,000", "10,000", "15,000", "20,000"]
   },
   {
     "num": 3,
-    "category": "🎭 Comedy",
-    "text": "Which comedian is famous for smashing watermelons?",
-    "answer": "Gallagher (1946-)",
+    "category": "🎼 Music",
+    "text": "Who sings 'Sugar, Honey, Honey'?",
+    "answer": "The Archies",
     "type": "video",
-    "media": "smash.mp4"
+    "media": "smash.mp4",
+    "answers": ["The Bee Gees", "The Archies", "Rick Astley", "Harry Styles"]
   },
   {
     "num": 4,
     "category": "🧬 Science",
-    "text": "How many watermelon varieties currently exist?",
-    "answer": "1200+ (Golden Midget, Moon and Stars, Orangeglo...)",
+    "text": "Only this bee gets to poop in the hive",
+    "answer": "It's good to be ... the Queen",
     "type": "image",
-    "media": "varieties.jpg"
+    "media": "varieties.jpg",
+    "answers": ["Worker", "Drone", "Queen", "King"]
   },
   {
     "num": 5,
     "category": "🍹 Food & Drink",
-    "text": "What's a refreshing Mexican drink often made with watermelon?",
-    "answer": "Agua fresca",
+    "text": "This alchoholic drink is made from honey",
+    "answer": "Mead",
     "type": "video",
-    "media": "fresca.mp4"
+    "media": "fresca.mp4",
+    "answers": ["Aqua fresca", "Coca Cola", "Yerba Mate", "Mead"]
   },
   {
     "num": 6,
-    "category": "🎨 Art",
-    "text": "Which artist painted this artwork?",
-    "answer": "Frida Kahlo - Viva La Vida (1954)",
+    "category": "📔 Books",
+    "text": "Who is the author of books that feature a honey-loving bear?",
+    "answer": "A. A. Milne",
     "type": "image",
-    "media": "frida.jpg"
+    "media": "frida.jpg",
+    "answers": ["J. K. Rowling", "B. B. Olney", "A. A. Milne", "E. H. Shepard"]
   },
   {
     "num": 7,
-    "category": "🏋️ Weights & Measures",
-    "text": "What's the weight of the world's heaviest watermelon?",
-    "answer": "350.5 lb - Christomer Kent (2013)",
+    "category": "🧬 Science",
+    "text": "Bees have a great sense of smell with 180 odorant receptors. How many do humans have?",
+    "answer": "400",
     "type": "image",
-    "media": "thicc.jpg"
+    "media": "thicc.jpg",
+    "answers": ["180", "200", "320", "400"]
   },
   {
     "num": 8,
     "category": "📜 History",
-    "text": "Which watermelon recipe appears in the first American cookbook",
-    "answer": "Watermelon rind pickles in American Cookery (1796) by Amelia Simmons",
+    "text": "A 'busy bee' gets things done. When did this phrase come about?",
+    "answer": "1530s",
     "type": "image",
-    "media": "cookbook.jpg"
+    "media": "cookbook.jpg",
+    "answers": ["1530s", "1630s", "1730s", "1830s"]
   },
   {
     "num": 9,
-    "category": "🗺️ Geography",
-    "text": "Where did the watermelon come from?",
-    "answer": "From Northeast Africa in the Kordofan region of southern Sudan (and not from South Africa)",
+    "category": "🏋️ Weights & Measures",
+    "text": "The average worker bee produces this amount of honey in her lifetime",
+    "answer": "1/12 teaspoon",
     "type": "image",
-    "media": "origin.jpg"
+    "media": "origin.jpg",
+    "answers": ["1/12 teaspoon", "1 teaspoon", "1 cup", "1 lbs."]
   }
 ]
