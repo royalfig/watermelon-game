@@ -141,6 +141,7 @@ export default {
 :root {
   --watermelon: #fae52a;
   --melon: #f3e567;
+  --blue: #2a3ffa;
   --light-green: #111003;
   --dark-green: #3a370c;
 
@@ -155,6 +156,8 @@ export default {
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
   --yellow-gradient: linear-gradient(to top, #fae52a, #fcf191);
+  --yellow-gradient-reverse: linear-gradient(to bottom, #fae52a, #fcf191);
+
   --pink-gradient: linear-gradient(
     to bottom,
     #fae52a,
@@ -189,12 +192,12 @@ body {
 #app {
   font-family: "Otomanopee One", sans-serif;
   font-weight: 400;
-  background-blend-mode: darken;
   overflow: hidden;
-}
 
-.container {
-  background: var(--pink-gradient);
+  background: url("./assets/bg.jpg"), var(--yellow-gradient-reverse);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
 }
 
 .slide-fade-enter-active {
