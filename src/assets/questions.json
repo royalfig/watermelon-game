@@ -15,12 +15,12 @@
     "answer": "20,000",
     "type": "video",
     "media": "species.mp4",
-    "answers": ["5,000", "10,000", "15,000", "20,000"]
+    "answers": ["50", "10,000", "15,000", "20,000"]
   },
   {
     "num": 3,
     "category": "🎼 Music",
-    "text": "Who sings \"Sugar, Sugar\"?",
+    "text": "Who sings Sugar, Sugar?",
     "answer": "The Archies",
     "type": "video",
     "media": "archies.mp4",
@@ -38,11 +38,11 @@
   {
     "num": 5,
     "category": "🍹 Food & Drink",
-    "text": "This alchoholic drink is made from honey",
+    "text": "This alcoholic drink is made from honey",
     "answer": "Mead",
     "type": "video",
     "media": "mead.mp4",
-    "answers": ["Aqua fresca", "Coca Cola", "Yerba Mate", "Mead"]
+    "answers": ["Aqua fresca", "White Claw", "Yerba Mate", "Mead"]
   },
   {
     "num": 6,
@@ -65,7 +65,7 @@
   {
     "num": 8,
     "category": "📜 History",
-    "text": "A \"busy bee\" gets things done. When did this phrase come about?",
+    "text": "A \"busy bee\" gets things done. When did this phrase originate?",
     "answer": "1530s",
     "type": "video",
     "media": "busy-bee.mp4",
